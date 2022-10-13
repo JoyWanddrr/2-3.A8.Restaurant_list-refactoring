@@ -1,7 +1,7 @@
 // 首頁路由，home page
 
 const express = require('express')
-const router = express.Router
+const router = express.Router()
 // 載入restaurants的schema
 const Restaurant = require('./../../models/restaurant')
 
@@ -32,4 +32,6 @@ router.get("/search", (req, res) => {
     })
     .catch(err => console.log(err))
 })
-module.export = router
+
+
+module.exports = router
