@@ -20,7 +20,7 @@
 1. 將專案 clone 到本地
 2. 透過終端機進入資料夾，輸入:
    ```
-   git init -y
+   git install
    ```
 3. 安裝完畢後輸入:
    ```
@@ -44,3 +44,5 @@
 * Mongoose 5.9.7
 * Bootstrap 4.1.3
 * Font-awesome 6.2.0
+* nodemon 2.0.20
+* method-override ^3.0.0

@@ -20,7 +20,32 @@ header {
   filter: blur(3px);
 }
 
-.search-bar .search-bar-outer {
+#search {
+  vertical-align: middle;
+  border-radius: 20px;
+  position: relative;
+  width: 300px;
+  height: 40px;
+  border: solid 1px #63717f;
+  font-size: 10pt;
+  color: #63717f;
+  padding-left: 45px;
+  margin-top: 40px;
+  z-index: 0;
+}
+
+.btn-search {
+  position: absolute;
+  top: 53%;
+  margin-left: 3px;
+  z-index: 1;
+  background-color: white;
+  border-radius: 20px;
+}
+
+
+
+/* .search-bar .search-bar-outer {
   margin: 0 auto;
   max-width: 680px;
   background-color: #fce2cf;
@@ -33,7 +58,8 @@ header {
 
 .search-bar .search-bar-inner h4 {
   color: #9b4b4b;
-}
+} */
+
 
 .form-control::placeholder {
   color: #aaaaaa;
