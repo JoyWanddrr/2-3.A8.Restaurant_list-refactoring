@@ -43,6 +43,12 @@ header {
   border-radius: 20px;
 }
 
+.form-select {
+  width: 200px;
+  height: 40px;
+  margin: 40px 35px 0 0;
+  padding-left: 10px;
+}
 
 
 /* .search-bar .search-bar-outer {
