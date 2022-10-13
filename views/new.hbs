@@ -1,0 +1,94 @@
+{{!-- 使用者新增資料的畫面(樣板) --}}
+
+{{!-- action:表單送出要送去哪。method="POST":是「用 POST 方法，把資料送給 /restaurants 位置」。這代表等下我們需要再新增一條 POST /restaurants 路由來接住這筆表單資料。
+--}}
+<form action="/restaurants" method="POST">
+  {{!-- <input> 標籤的 name 屬性，這個 name 屬性很重要，它是 HTTP 傳輸時的資料名稱。這些資料會被放在 HTTP 的 request body 裡，進到 Express.js 以後打包成
+  req.body物件，就能在後續流程中使用： --}}
+  {{!--設定edit的method為POST。要新增路由接住資料 --}}
+  <h4 class="m-auto p-4 restaurant-show-title"
+    style="color: rgba(181, 97, 69, 0.724);background-color:white; font-size:25px;border:solid 2px black; width:800px;">
+    新增餐廳
+  </h4>
+  <div class="row g-2 m-auto ">
+    <label for="name" class="col-md-4 col-form-label">
+      餐廳名稱
+    </label>
+    <div class="col-md-8">
+      <input type="text" name="name" class="form-control mb-2" value="餐廳名稱" required>
+    </div>
+
+    <label for="name_en" class="col-md-4 col-form-label">
+      餐廳英文名稱
+    </label>
+    <div class="col-md-8">
+      <input type="text" name="name_en" class="form-control mb-2" value="餐廳英文名稱" required>
+    </div>
+
+    <label for="category" class="col-md-4 col-form-label">
+      類別
+    </label>
+    <div class="col-md-8">
+      <input list="titles" type="text" name="category" class="form-control mb-2" value="可自行新增" required>
+      <datalist id="titles">
+        <option>中東料理</option>
+        <option>美式</option>
+        <option>日本料理</option>
+        <option>義式餐廳</option>
+        <option>咖啡</option>
+        <option>酒吧</option>
+      </datalist>
+    </div>
+
+    <label for="image" class="col-md-4 col-form-label">
+      餐廳圖片
+    </label>
+    <div class="col-md-8">
+      <input type="url" name="image" class="form-control mb-2" value="圖片網址">
+    </div>
+
+    <label for="location" class="col-md-4 col-form-label">
+      地址
+    </label>
+    <div class="col-md-8">
+      <input type="text" name="location" class="form-control mb-2" value="餐廳地址" required>
+    </div>
+
+    <label for="google_map" class="col-md-4 col-form-label">
+      Google Map
+    </label>
+    <div class="col-md-8">
+      <input type="url" name="google_map" class="form-control mb-2" value="Google Map網址">
+      </a>
+    </div>
+
+    <label for="phone" class="col-md-4 col-form-label">
+      電話
+    </label>
+    <div class="col-md-8">
+      <input type="text" name="phone" class="form-control mb-2" oninput="if(value.length>10)value=value.slice(0,10)"
+        value="0123456789" required>
+    </div>
+
+    <label for="rating" class="col-md-4 col-form-label">
+      評分
+    </label>
+    <div class="col-md-8">
+      <input type="number" name="rating" class="form-control mb-2" min='0' max="5" step="0.1" required>
+      <small>0~5分</small>
+    </div>
+
+
+    <label for="description" class="col-md-4 col-form-label">
+      敘述
+    </label>
+    <div class="col-md-8">
+      <textarea id="description" name="description" rows="3" cols="70" required>餐廳描述</textarea>
+    </div>
+
+  </div>
+  <div class=" d-flex justify-content-end mr-4">
+    <button type="submit" class=" p-2 btn btn-primary m-1">save</button>
+    <a href="/" class="p-2 btn btn-primary m-1">back</a>
+  </div>
+</form>

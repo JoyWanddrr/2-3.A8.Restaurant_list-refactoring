@@ -1,0 +1,89 @@
+{{!--設定edit的method為POST。要新增路由接住資料 --}}
+<form action="/restaurants/{{restaurant._id}}?_method=PUT" method="POST">
+  <h4 class="mb-1 restaurant-show-title" style="color: black;background-color:white; font-size:25px;">
+    正在修改:<span style="color:blue">{{restaurant.name}}</span>的資訊
+  </h4>
+
+  <div class="row m-auto g-2">
+    <label for="name" class="col-md-4 col-form-label">
+      餐廳名稱
+    </label>
+    <div class="col-md-8">
+      <input type="text" name="name" class="form-control mb-2" value="{{restaurant.name}}" required>
+    </div>
+
+    <label for="name_en" class="col-md-4 col-form-label">
+      餐廳英文名稱
+    </label>
+    <div class="col-md-8">
+      <input type="text" name="name_en" class="form-control mb-2" value="{{restaurant.name_en}}" required>
+    </div>
+
+    <label for="category" class="col-md-4 col-form-label">
+      類別
+    </label>
+    <div class="col-md-8">
+      <input list="titles" type="text" name="category" class="form-control mb-2" value="{{restaurant.category}}"
+        required>
+      <datalist id="titles">
+        <option>中東料理</option>
+        <option>美式</option>
+        <option>日本料理</option>
+        <option>義式餐廳</option>
+        <option>咖啡</option>
+        <option>酒吧</option>
+      </datalist>
+    </div>
+
+    <label for="image" class="col-md-4 col-form-label">
+      圖片
+    </label>
+    <div class="col-md-8">
+      <input type="url" name="image" class="form-control mb-2" value="{{restaurant.image}}" required>
+    </div>
+
+    <label for="location" class="col-md-4 col-form-label">
+      地址
+    </label>
+    <div class="col-md-8">
+      <input type="text" name="location" class="form-control mb-2" value="{{restaurant.location}}" required>
+    </div>
+
+    <label for="google_map" class="col-md-4 col-form-label">
+      Google Map
+    </label>
+    <div class="col-md-8">
+      <input type="url" name="google_map" class="form-control mb-2" value="{{restaurant.google_map}}">
+      </a>
+    </div>
+
+    <label for="phone" class="col-md-4 col-form-label">
+      電話
+    </label>
+    <div class="col-md-8">
+      <input type="text" name="phone" class="form-control mb-2" oninput="if(value.length>10)value=value.slice(0,10)"
+        value="{{restaurant.phone}}" required>
+    </div>
+
+    <label for="rating" class="col-md-4 col-form-label">
+      評分
+    </label>
+    <div class="col-md-8">
+      <input type="number" name="rating" class="form-control mb-2" min='0' max="5" step="0.1"
+        value="{{restaurant.rating}}" required>
+    </div>
+
+
+    <label for="description" class="col-md-4 col-form-label">
+      敘述
+    </label>
+    <div class="col-md-8">
+      <textarea id="description" name="description" rows="3" cols="70" required>{{restaurant.description}}</textarea>
+    </div>
+
+  </div>
+  <div class=" d-flex justify-content-end mr-4">
+    <button type="submit" class=" p-2 btn btn-primary m-1">save</button>
+    <a href="/" class="p-2 btn btn-primary m-1">back</a>
+  </div>
+</form>
