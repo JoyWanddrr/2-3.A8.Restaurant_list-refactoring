@@ -15,7 +15,7 @@
 
 ## 首頁瀏覽
 
-![Restaurant List Index image.](./public/image/index.png "Restaurant List Index image.")
+![Restaurant List Index image changed.](./public/image/index.png "Restaurant List Index image.")
 
 ## 環境建置與需求 
 * npm 
