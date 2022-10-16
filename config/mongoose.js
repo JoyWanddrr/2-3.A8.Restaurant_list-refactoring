@@ -2,7 +2,7 @@
 
 
 const mongoose = require('mongoose')
-mongoose.connect("mongodb+srv://Alpha:camp@cluster0.j297u5e.mongodb.net/restaurant_list?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://Alpha:camp@cluster0.j297u5e.mongodb.net/restaurant_list?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
 // mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // 取得資料庫連線

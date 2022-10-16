@@ -1,21 +1,26 @@
 <!-- search bar -->
-<div class="container d-flex justify-content-between align-items-center">
-  <form action="/search" class="d-flex">
-    <div class="input-group mb-3 w-25">
-      <button class="btn btn-search" type="button"><i class="fas fa-search"></i></button>
-      <input type="search" name="keyword" id='search' class="form-control" placeholder="輸入餐廳、分類"
-        aria-label="Restaurant Name..." value="{{keywords}}" aria-describedby="search-button">
+<div class="container">
+  <form action="/search" id="all-form">
+    <div class=" d-flex justify-content-between align-items-center">
+      <div class="input-group mb-3 w-25">
+        <button class="btn btn-search" type="button"><i class="fas fa-search"></i></button>
+        <input type="text" name="keyword" id='search' class="form-control" placeholder="輸入餐廳、分類"
+          aria-label="Restaurant Name..." value="{{keywords}}" aria-describedby="search-button">
+      </div>
+
+      <div class="options">
+        <select class="form-select form-select-lg mb-3" name='sort' aria-label=".form-select-lg example">
+          <option selected>排列方式選擇</option>
+          <option value="1" href="/">A-->Z</option>
+          <option value="2">Z-->A</option>
+          <option value="3">類別</option>
+          <option value="4">地區</option>
+        </select>
+      </div>
     </div>
+
   </form>
-  <div class="options">
-    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-      <option selected>排列方式選擇</option>
-      <option value="1">A-->Z</option>
-      <option value="2">Z-->A</option>
-      <option value="3">類別</option>
-      <option value="4">地區</option>
-    </select>
-  </div>
+
 </div>
 
 <!-- restaurant list -->
