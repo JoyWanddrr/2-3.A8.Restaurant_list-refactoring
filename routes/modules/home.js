@@ -14,9 +14,6 @@ router.get('/', (req, res) => {
     .catch(error => console.error(error))
 })
 
-router.post('/search', (req, res) => {
-  console.log(req.body)
-})
 // 搜尋特定餐廳
 router.get("/search", (req, res) => {
   // 擷取input
@@ -38,5 +35,9 @@ router.get("/search", (req, res) => {
     .catch(err => console.log(err))
 })
 
+
+router.get('/', (req, res) => {
+
+})
 
 module.exports = router
