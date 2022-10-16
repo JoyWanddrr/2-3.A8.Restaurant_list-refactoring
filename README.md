@@ -1,4 +1,4 @@
-# Restaurant List (擴充CURD)
+# Restaurant List (Refactoring)
 
 讓使用者可以瀏覽餐廳資料、並修改、新增。
 
@@ -7,6 +7,11 @@
 * 創建餐廳資料
 * 修改餐廳資料
 * 可連結到GOOGLE MAP
+
+## 強化部分
+* 參考 RESTful 設計，運用 HTTP 動詞來讓路由帶有語義。
+* 使用 express.Router 獨立路由器，並規劃路由模組。
+* 優化視覺效果。
 
 ## 首頁瀏覽
 
