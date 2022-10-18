@@ -25,21 +25,36 @@
 1. 將專案 clone 到本地
 2. 透過終端機進入資料夾，輸入:
    ```
-   git install
+   npm install
    ```
-3. 安裝完畢後輸入:
+3. 設定 MongoDB 環境變數
+
+   ```
+   For Windows cmdset: "MONGODB_URI=你的MongoDB連線字串" 
+
+   For MacOS & Git Basg: "export MONGODB_URI="你的MongoDB連線字串"
+   ```
+4. 執行完畢之後輸入已下程式碼以執行種子資料。
+   ```
+   npm run seed
+   ```
+5. 看到以下訊息表示種子資料運行成功。
+   ```
+   restaurantSeeder done!
+   ```
+6. 執行程式
    ```
    npm run dev
-   ```
-4. 看見此行訊息則代表順利運行:
+   ```   
+7. 看見此行訊息則代表順利運行:
    "express now is listening on prot 3000."
-5. 請在瀏覽器輸入以下網址:
+8. 請在瀏覽器輸入以下網址:
    http://localhost:3000
-6. 結束使用請在終端機中輸入:
+9. 結束使用請在終端機中輸入:
    ```
    ctrl + c
    ```
-7. 再次開啟，從步驟3開始。
+10. 再次開啟，從步驟5開始。
 
 ## 開發工具
 

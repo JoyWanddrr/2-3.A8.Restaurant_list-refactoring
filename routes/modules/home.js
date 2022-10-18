@@ -5,22 +5,24 @@ const router = express.Router()
 // 載入restaurants的schema
 const Restaurant = require('./../../models/restaurant')
 
-
 router.get('/', (req, res) => {
-
   Restaurant.find()
     .lean()
-    .then(restaurants => res.render('index', { restaurants }))
+    // 測試餐廳資料長度，為0則可以requrie seed
+    .then(restaurants => {
+      res.render('index', { restaurants })
+    })
     .catch(error => console.error(error))
 })
 
+
 // 搜尋特定餐廳
-router.get("/search", (req, res) => {
+router.get('/search', (req, res) => {
   // 擷取input
   const keywords = req.query.keyword.trim()
   // 如果查詢不到則返回首頁
   if (!keywords) {
-    return res.redirect("/")
+    return res.redirect('/')
   }
   Restaurant.find()
     .lean()
@@ -32,12 +34,9 @@ router.get("/search", (req, res) => {
       )
       res.render('index', { restaurants: filterRestaurant, keywords })
     })
-    .catch(err => console.log(err))
+    .catch(err => console.error(err))
 })
 
 
-router.get('/', (req, res) => {
-
-})
 
 module.exports = router

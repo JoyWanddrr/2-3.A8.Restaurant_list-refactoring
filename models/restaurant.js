@@ -42,4 +42,5 @@ const restSchema = new Schema({
     required: true
   }
 })
-module.exports = mongoose.model('restaurant', restSchema)
+module.exports = mongoose.model('Restaurant', restSchema)
+//  mongoose.model('restaurant',xxx)的restaurant，是Collection(RDBMS中的table)的名稱。mongoose中，會自動複數化，所以在Mongodb中的Collection name會變成restaurants。
