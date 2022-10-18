@@ -32,7 +32,7 @@
    ```
    For Windows cmdset: "MONGODB_URI=你的MongoDB連線字串" 
 
-   For MacOS & Git Basg: "export MONGODB_URI="你的MongoDB連線字串"
+   For MacOS & Git Bash: "export MONGODB_URI="你的MongoDB連線字串"
    ```
 4. 執行完畢之後輸入已下程式碼以執行種子資料。
    ```
@@ -46,8 +46,10 @@
    ```
    npm run dev
    ```   
-7. 看見此行訊息則代表順利運行:
-   "express now is listening on prot 3000."
+7. 看見此行訊息則代表順利運行
+   ```
+   express now is listening on prot 3000.
+   ```
 8. 請在瀏覽器輸入以下網址:
    http://localhost:3000
 9. 結束使用請在終端機中輸入:
@@ -65,4 +67,4 @@
 * Bootstrap 4.1.3
 * Font-awesome 6.2.0
 * nodemon 2.0.20
-* method-override ^3.0.0
+* method-override 3.0.0
