@@ -9,7 +9,7 @@ const Restaurant = require('../restaurant')
 const restaurantList = require('./restaurant.json').results
 
 // export的db用在這裡。
-db.once("open", () => {
+db.once('open', () => {
   // 想的太複雜了，直接把results提取放入就可以
   Restaurant.create(restaurantList)
     .then(() => {
